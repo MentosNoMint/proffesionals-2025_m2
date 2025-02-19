@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Космос</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#/gagarin">Гагарин</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/missions">Миссии</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/flights">Список рейсов</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/search">Поиск</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/moon-order">Заказ на Луне</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/logout">Выход</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Добавление нового рейса</h2>
+    <form>
+        <div class="mb-3">
+            <label for="flightNumber" class="form-label">Номер рейса</label>
+            <input type="text" class="form-control" id="flightNumber" placeholder="Пример: СФ-103" required>
+        </div>
+        <div class="mb-3">
+            <label for="destination" class="form-label">Место прибытия</label>
+            <input type="text" class="form-control" id="destination" placeholder="Пример: Марс" required>
+        </div>
+        <div class="mb-3">
+            <label for="launchDate" class="form-label">Дата запуска</label>
+            <input type="date" class="form-control" id="launchDate" required>
+        </div>
+        <div class="mb-3">
+            <label for="seatsAvailable" class="form-label">Количество мест</label>
+            <input type="number" class="form-control" id="seatsAvailable" placeholder="Пример: 6" min="1" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Сохранить</button>
+    </form>
+    <div class="mt-3 text-center">
+        <button class="btn btn-secondary" onclick="location.hash='/flights.html'">К списку рейсов</button>
+    </div>
+</div>

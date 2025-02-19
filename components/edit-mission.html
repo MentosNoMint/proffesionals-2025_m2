@@ -1,0 +1,133 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Космос</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#/gagarin">Гагарин</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/missions">Миссии</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/flights">Список рейсов</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/search">Поиск</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/moon-order">Заказ на Луне</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/logout">Выход</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Редактирование миссии</h2>
+    <div class="accordion" id="editMissionAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEdit">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" id="mission-name"
+                        data-bs-target="#collapseEdit">
+                    Название миссии
+                </button>
+            </h2>
+            <div id="collapseEdit" class="accordion-collapse collapse show" data-bs-parent="#editMissionAccordion">
+                <div class="accordion-body">
+                    <form id="editMissionForm" class="row g-3">
+                        <!-- Название миссии -->
+                        <div class="col-12">
+                            <label for="missionName" class="form-label">Название миссии</label>
+                            <input type="text" class="form-control" id="missionName" name="name"
+                                   placeholder="Введите название миссии">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+
+                        <!-- Дата запуска -->
+                        <div class="col-md-6">
+                            <label for="launchDate" class="form-label">Дата запуска</label>
+                            <input type="date" class="form-control" id="launchDate" name="launch_date">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+
+                        <!-- Дата посадки -->
+                        <div class="col-md-6">
+                            <label for="landingDate" class="form-label">Дата посадки</label>
+                            <input type="date" class="form-control" id="landingDate" name="landing_date">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+
+                        <!-- Место запуска -->
+                        <div class="col-md-6">
+                            <label for="launchSite" class="form-label">Место запуска</label>
+                            <input type="text" class="form-control" id="launchSite" placeholder="Место запуска" name="launch_site">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+
+                        <!-- Координаты места запуска -->
+                        <div class="col-md-3">
+                            <label for="launchLatitude" class="form-label">Широта</label>
+                            <input type="number" step="any" class="form-control" id="launchLatitude" name="launch_latitude"
+                                   placeholder="Широта">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="launchLongitude" class="form-label">Долгота</label>
+                            <input type="number" step="any" class="form-control" id="launchLongitude" name="launch_longitude"
+                                   placeholder="Долгота">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+
+                        <!-- Место посадки -->
+                        <div class="col-md-6">
+                            <label for="landingSite" class="form-label">Место посадки</label>
+                            <input type="text" class="form-control" id="landingSite" placeholder="Место посадки" name="landing_site">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+
+                        <!-- Координаты места посадки -->
+                        <div class="col-md-3">
+                            <label for="landingLatitude" class="form-label">Широта</label>
+                            <input type="number" step="any" class="form-control" id="landingLatitude" name="landing_latitude"
+                                   placeholder="Широта">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="landingLongitude" class="form-label">Долгота</label>
+                            <input type="number" step="any" class="form-control" id="landingLongitude" name="landing_longitude"
+                                   placeholder="Долгота">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+
+                        <!-- Информация о космическом корабле -->
+                        <div class="col-md-6">
+                            <label for="lunarModule" class="form-label">Лунный модуль</label>
+                            <input type="text" class="form-control" id="lunarModule" placeholder="Лунный модуль" name="lunar_module">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="commandModule" class="form-label">Управляющий модуль</label>
+                            <input type="text" class="form-control" id="commandModule" placeholder="Управляющий модуль" name="command_module">
+                            <div class="invalid-feedback test-1-emph">Error message</div>
+                        </div>
+
+                        <!-- Экипаж -->
+                        <div class="col-12">
+                            <h5>Экипаж:</h5>
+                            <div id="crewList">
+                                <!-- Здесь будут динамически добавляться члены экипажа -->
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Имя космонавта" name="crew">
+                                    <input type="text" class="form-control" placeholder="ранг" name="crew_rank">
+                                    <div class="invalid-feedback test-1-emph">Error message</div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary addCrewMember">Добавить космонавта
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger removeCrewMember">Удалить</button>
+                        </div>
+
+                        <!-- Кнопки управления -->
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary me-2">Сохранить изменения</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.history.back()">Отмена
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

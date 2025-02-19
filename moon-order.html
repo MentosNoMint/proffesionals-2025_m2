@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказ на Луне</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Космос</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="gagarin.html">Гагарин</a></li>
+        <li class="nav-item"><a class="nav-link" href="missions.html">Миссии</a></li>
+        <li class="nav-item"><a class="nav-link" href="flights.html">Список рейсов</a></li>
+        <li class="nav-item"><a class="nav-link" href="search.html">Поиск</a></li>
+        <li class="nav-item"><a class="nav-link" href="moon-order.html">Заказ на Луне</a></li>
+        <li class="nav-item"><a class="nav-link" href="logout.html">Выход</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Заказ на Луне</h2>
+  <div class="mb-3">
+    <label for="message" class="form-label">Текстовое сообщение</label>
+    <textarea class="form-control" id="message" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="imageUpload" class="form-label">Загрузите изображение</label>
+    <input class="form-control" type="file" id="imageUpload">
+  </div>
+  <button class="btn btn-primary">Сделать подпись</button>
+  <button class="btn btn-secondary" onclick="location.href='gagarin.html'">На главную</button>
+</div>
+</body>
+</html>
