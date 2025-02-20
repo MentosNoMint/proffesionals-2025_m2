@@ -24,6 +24,14 @@
     animation: fadeOut 0.3s ease-in-out forwards;
 }
 
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
 .toaster {
     position: fixed;
     right: 30px;
